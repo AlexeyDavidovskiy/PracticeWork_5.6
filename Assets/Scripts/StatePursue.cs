@@ -19,14 +19,6 @@ public class StatePursue : State
 
     public override void Execute()
     {
-        //if (distance <= visible) 
-        //{
-        //    if(enemy.stoppingDistance <= 1) 
-        //    {
-        //        enemy.destination = player.transform.position;
-        //    }
-        //}
-
         if (enemy.stoppingDistance <= 1)
         {
             enemy.destination = player.transform.position;

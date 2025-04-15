@@ -25,20 +25,6 @@ public class StatePatrol : State
 
     public override void Execute()
     {
-        //if(distance > visible) 
-        //{
-        //    if(enemy.stoppingDistance <= 1) 
-        //    {
-        //        timeToWalk -= Time.deltaTime;
-        //        if (timeToWalk <= 0) 
-        //        {
-        //            timeToWalk = Random.Range(minTimeToWalk, maxTimeToWalk);
-        //            randomPoint = Random.Range(0, patrolPoints.Length);
-        //            enemy.destination = patrolPoints[randomPoint].transform.position;
-        //        }
-        //    }
-        //}
-
         if (enemy.stoppingDistance <= 1)
         {
             timeToWalk -= Time.deltaTime;

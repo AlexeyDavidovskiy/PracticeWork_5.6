@@ -2572,9 +2572,12 @@ GameObject:
   - component: {fileID: 2088262707}
   - component: {fileID: 2088262706}
   - component: {fileID: 2088262711}
-  - component: {fileID: 2088262713}
   - component: {fileID: 2088262712}
   - component: {fileID: 2088262714}
+  - component: {fileID: 2088262718}
+  - component: {fileID: 2088262717}
+  - component: {fileID: 2088262716}
+  - component: {fileID: 2088262715}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2709,33 +2712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2088262711}
-  enemy: {fileID: 2088262713}
---- !u!114 &2088262713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088262705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf5c7580fe2af445a1722275336364c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolPoints:
-  - {fileID: 690302182}
-  - {fileID: 617299050}
-  - {fileID: 1309133834}
-  - {fileID: 1980698867}
-  - {fileID: 1255733106}
-  - {fileID: 588855279}
-  player: {fileID: 747571744}
-  minTimeToWalk: 10
-  maxTimeToWalk: 20
-  timeToWalgIfCharacterDetected: 0
-  visible: 12
-  distanceToAttack: 2
-  enemy: {fileID: 2088262714}
+  attackState: {fileID: 2088262717}
+  patrolState: {fileID: 2088262716}
+  pursueState: {fileID: 2088262715}
 --- !u!195 &2088262714
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2758,6 +2737,76 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2088262715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088262705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44782cde3e216b14fad1e727b019b443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 747571744}
+  visible: 10
+  enemy: {fileID: 2088262714}
+--- !u!114 &2088262716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088262705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de427fde49b27364584da7e6e94baa24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolPoints:
+  - {fileID: 690302182}
+  - {fileID: 617299050}
+  - {fileID: 1309133834}
+  - {fileID: 1980698867}
+  - {fileID: 1255733106}
+  - {fileID: 588855279}
+  player: {fileID: 747571744}
+  minTimeToWalk: 10
+  maxTimeToWalk: 20
+  visible: 10
+  enemy: {fileID: 2088262714}
+--- !u!114 &2088262717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088262705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10bb8f79708f5640a4dd19296a627f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 747571744}
+  distanceToAttack: 1.5
+  visible: 10
+--- !u!114 &2088262718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088262705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020a2ad29916da442bbd60869e07e5d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states:
+  - {fileID: 2088262717}
+  - {fileID: 2088262716}
+  - {fileID: 2088262715}
 --- !u!1 &2100840438
 GameObject:
   m_ObjectHideFlags: 0
