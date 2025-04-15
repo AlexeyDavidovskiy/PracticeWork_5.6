@@ -3,17 +3,19 @@ using UnityEngine;
 public class EnemyAnimationController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    [SerializeField] private Enemy enemy;
+    [SerializeField] private StateAttack attackState;
+    [SerializeField] private StatePatrol patrolState;
+    [SerializeField] private StatePursue pursueState;
 
     private void Update()
     {
-        WalkAnimation(enemy.EnemySpeed);
-        AttackAnimation(enemy.IsAttacking);
+        WalkAnimation(patrolState.EnemySpeed, pursueState.EnemySpeed);
+        AttackAnimation(attackState.IsAttacking);
     }
 
-    private void WalkAnimation(float enemySpeed) 
+    private void WalkAnimation(float enemySpeedPatrol, float enemySpeedPursue) 
     {
-        if (enemySpeed > 0) 
+        if (enemySpeedPatrol > 0 || enemySpeedPursue > 0) 
         {
             animator.SetBool("IsWalking", true);
         }
