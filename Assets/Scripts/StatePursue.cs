@@ -6,6 +6,7 @@ public class StatePursue : State
     [SerializeField] private GameObject player;
     [SerializeField] private float visible;
     [SerializeField] private NavMeshAgent enemy;
+    [SerializeField] private AnimationCurve utilityCurve;
 
     private float distance;
 
@@ -14,7 +15,10 @@ public class StatePursue : State
     public override float Evaluate()
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
-        return distance <= visible ? 1f : 0f;
+
+        float normalizedDistance = Mathf.Clamp01(distance / visible);
+
+        return utilityCurve.Evaluate(normalizedDistance);
     }
 
     public override void Execute()

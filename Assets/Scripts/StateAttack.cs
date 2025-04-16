@@ -5,6 +5,7 @@ public class StateAttack : State
     [SerializeField] private GameObject player;
     [SerializeField] private float distanceToAttack;
     [SerializeField] private float visible;
+    [SerializeField] private AnimationCurve utilityCurve;
 
     private float distance;
     private bool isAttacking;
@@ -13,7 +14,15 @@ public class StateAttack : State
     public override float Evaluate()
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
-        return distance <= visible && distance <= distanceToAttack ? 1f : 0f;
+
+        if (distance > visible) 
+        {
+            return 0f;
+        }
+        
+        float normalizedDistance = Mathf.Clamp01(distance / distanceToAttack);
+
+        return utilityCurve.Evaluate(normalizedDistance);
     }
 
     public override void Execute()

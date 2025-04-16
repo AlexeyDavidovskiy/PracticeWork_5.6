@@ -2750,8 +2750,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 747571744}
-  visible: 10
+  visible: 20
   enemy: {fileID: 2088262714}
+  utilityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &2088262716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2774,8 +2798,32 @@ MonoBehaviour:
   player: {fileID: 747571744}
   minTimeToWalk: 10
   maxTimeToWalk: 20
-  visible: 10
+  visible: 20
   enemy: {fileID: 2088262714}
+  utilityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &2088262717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2789,8 +2837,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 747571744}
-  distanceToAttack: 1.5
-  visible: 10
+  distanceToAttack: 2
+  visible: 20
+  utilityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.23345947
+      value: 0.9961128
+      inSlope: -1.3559427
+      outSlope: -1.3559427
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.96520615
+      value: 0.00390625
+      inSlope: -1.3559427
+      outSlope: -1.3559427
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &2088262718
 MonoBehaviour:
   m_ObjectHideFlags: 0

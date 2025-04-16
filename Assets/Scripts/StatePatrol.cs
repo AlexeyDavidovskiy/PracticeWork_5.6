@@ -9,6 +9,7 @@ public class StatePatrol : State
     [SerializeField] private float maxTimeToWalk;
     [SerializeField] private float visible;
     [SerializeField] private NavMeshAgent enemy;
+    [SerializeField] private AnimationCurve utilityCurve;
 
     private float distance;
     private float timeToWalk;
@@ -20,7 +21,9 @@ public class StatePatrol : State
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
 
-        return distance > visible ? 1f : 0f;
+        float normalizedDistance = Mathf.Clamp01(distance / visible);
+
+        return utilityCurve.Evaluate(normalizedDistance);
     }
 
     public override void Execute()
