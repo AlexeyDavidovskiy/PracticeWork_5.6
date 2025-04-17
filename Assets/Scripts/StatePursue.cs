@@ -28,4 +28,9 @@ public class StatePursue : State
             enemy.destination = player.transform.position;
         }
     }
+
+    public override void Exit()
+    {
+        
+    }
 }

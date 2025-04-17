@@ -29,4 +29,9 @@ public class StateAttack : State
     {
         isAttacking = true;
     }
+
+    public override void Exit()
+    {
+        isAttacking = false; 
+    }
 }

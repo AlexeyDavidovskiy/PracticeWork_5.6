@@ -5,6 +5,8 @@ public class AIController : MonoBehaviour
 {
     [SerializeField] private List<State> states;
 
+    private State currentState;
+
     private void Update()
     {
         float maxUtility = 0;
@@ -18,6 +20,12 @@ public class AIController : MonoBehaviour
                 maxUtility = utility;
                 targetState = state;
             }
+        }
+
+        if (targetState != currentState)
+        {
+            currentState?.Exit();
+            currentState = targetState;
         }
 
         targetState?.Execute();

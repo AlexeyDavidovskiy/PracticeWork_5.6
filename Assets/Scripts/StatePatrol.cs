@@ -39,4 +39,9 @@ public class StatePatrol : State
             }
         }
     }
+
+    public override void Exit()
+    {
+        
+    }
 }
