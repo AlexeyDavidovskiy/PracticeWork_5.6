@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxEnemies: 10
   spawnInterval: 2.5
-  gameTitle: My Favorite Game
+  gameTitle: PracticeWork_6.6

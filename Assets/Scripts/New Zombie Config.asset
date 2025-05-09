@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae8f8cea52e78e45ab1e2b3afabc291, type: 3}
+  m_Name: New Zombie Config
+  m_EditorClassIdentifier: 
+  zombiePrefab: {fileID: 4451840995225321643, guid: f6290ed53ea97d64ebb30636b6d31e5d,
+    type: 3}
+  spawnPoints:
+  - {x: 32.48, y: 0.21, z: 32.42}
+  - {x: 32.48, y: 0.21, z: -32.2}
+  - {x: -32.708, y: 0.21, z: -32.2}
+  - {x: -32.708, y: 0.21, z: 32.696}
